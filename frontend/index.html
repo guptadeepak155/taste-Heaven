@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Restaurant — Taste Heaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-style: italic;">
+  <header class="site-header">
+    <div class="logo" style="font-size:x-large;">
+      <img src="image/download.jfif" alt="Taste Heaven logo" class="logo-img" />
+      <span>Taste Heaven</span>
+    </div>
+      <nav style="font-size: large;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#menu" class="nav-link">Menu</a>
+        <a href="cart.html" class="nav-link">Cart (<span id="cart-count">0</span>)</a>
+        <a href="orders.html" class="nav-link">Orders</a>
+        <a href="#contact" class="nav-link">Contact</a>
+
+        <span id="userGreeting" class="nav-link"></span>
+        <a href="login.html" class="nav-link" id="loginNav">Login</a>
+        <a href="#" class="nav-link" id="logoutNav" style="display:none;">Logout</a>
+      </nav>
+
+      </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Taste Heaven</h1>
+        <p>
+          Indulge in authentic flavors, crafted with passion and served with warmth.  
+          Whether you dine in or order out, every bite is a moment to remember.
+        </p>
+        <a class="btn primary" href="#menu">View Our Menu</a>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <img
+          class="hero-image"
+          src="image/Butter Paneer Masala.png"
+          alt="Delicious pasta dish served at Taste Heaven"
+        />
+      </div>
+    </section>
+
+
+    <section id="menu" class="container section">
+      <h2 class="section-title">Our Menu</h2>
+      <div id="products-grid" class="products-grid">
+        <!-- products injected by script.js -->
+      </div>
+    </section>
+        <!-- Contact Section -->
+<!-- ✅ Contact / Enquiry Section -->
+    <section id="contact">
+      <h2 style="
+      text-align: center;
+      font-style: italic; 
+      border-radius: 8px;
+      font-size: 20px;
+      margin: 0 auto 25px auto;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #ff9a00, #ff6a00);
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      width: 700px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        ">Contact / Enquiry</h2>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 25px;
+        background: linear-gradient(145deg, #fffef5, #fff8e1);
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      "
+      onmouseover="this.style.boxShadow='0 8px 26px rgba(0, 0, 0, 0.12)'"
+      onmouseout="this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.08)'"
+    >
+      <input
+        id="contactName"
+        placeholder="Your name"
+        type="text"
+        style="
+          width: 100%;
+          padding: 14px;
+          border-radius: 10px;
+          border: 1.5px solid #ddd;
+          font-size: 15px;
+          outline: none;
+          transition: 0.25s ease;
+        "
+        onfocus="this.style.borderColor='#ff9800'; this.style.boxShadow='0 0 8px rgba(255, 152, 0, 0.35)'"
+        onblur="this.style.borderColor='#ddd'; this.style.boxShadow='none'"
+      />
+
+      <input
+        id="contactEmail"
+        placeholder="Your email"
+        type="email"
+        style="
+          width: 100%;
+          padding: 14px;
+          border-radius: 10px;
+          border: 1.5px solid #ddd;
+          font-size: 15px;
+          outline: none;
+          transition: 0.25s ease;
+        "
+        onfocus="this.style.borderColor='#ff9800'; this.style.boxShadow='0 0 8px rgba(255, 152, 0, 0.35)'"
+        onblur="this.style.borderColor='#ddd'; this.style.boxShadow='none'"
+      />
+
+      <textarea
+        id="contactMessage"
+        placeholder="Your message / enquiry"
+        rows="6"
+        style="
+          width: 100%;
+          padding: 14px;
+          border-radius: 10px;
+          border: 1.5px solid #ddd;
+          font-size: 15px;
+          outline: none;
+          transition: 0.25s ease;
+        "
+        onfocus="this.style.borderColor='#ff9800'; this.style.boxShadow='0 0 8px rgba(255, 152, 0, 0.35)'"
+        onblur="this.style.borderColor='#ddd'; this.style.boxShadow='none'"
+      ></textarea>
+
+      <div style="display: flex; gap: 10px; justify-content: flex-end;">
+        <button
+          id="contactSubmit"
+          style="
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s ease;
+          "
+          onmouseover="this.style.background='#e68900'"
+          onmouseout="this.style.background='#ff9800'"
+        >
+          Send Enquiry
+        </button>
+
+        <button
+          id="contactClear"
+          style="
+            background: transparent;
+            border: 1.5px solid #ff9800;
+            color: #ff9800;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s ease;
+          "
+          onmouseover="this.style.background='#fff3e0'"
+          onmouseout="this.style.background='transparent'"
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+
+  <!-- ✅ Popup Toast -->
+  <div
+    id="successPopup"
+    style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #43a047;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      font-weight: 500;
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.4s ease;
+      z-index: 1000;
+    "
+  >
+    ✅ Message Sent Successfully!
+  </div>
+    <script>
+    const popup = document.getElementById("successPopup");
+
+    document.getElementById("contactSubmit").addEventListener("click", () => {
+      const name = document.getElementById("contactName").value.trim();
+      const email = document.getElementById("contactEmail").value.trim();
+      const message = document.getElementById("contactMessage").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill all fields before submitting.");
+        return;
+      }
+
+      document.getElementById("contactName").value = "";
+      document.getElementById("contactEmail").value = "";
+      document.getElementById("contactMessage").value = "";
+
+      popup.style.opacity = "1";
+      popup.style.transform = "translateX(0)";
+      setTimeout(() => {
+        popup.style.opacity = "0";
+        popup.style.transform = "translateX(50px)";
+      }, 2500);
+    });
+
+    document.getElementById("contactClear").addEventListener("click", () => {
+      document.getElementById("contactName").value = "";
+      document.getElementById("contactEmail").value = "";
+      document.getElementById("contactMessage").value = "";
+    });
+  </script>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 Taste Heaven.</div>
+    <div> Designed and developed by the Taste Heaven Web Team.</div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // render products on page load
+    window.addEventListener('load', () => {
+      if (typeof fetchAndRenderProducts === 'function') fetchAndRenderProducts();
+      if (typeof updateCartCount === 'function') updateCartCount();
+    });
+    window.addEventListener('load', () => {
+      if (typeof fetchAndRenderProducts === 'function') fetchAndRenderProducts();
+      if (typeof updateCartCount === 'function') updateCartCount();
+    });
+
+    // initialize contact form if present
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof bindContactForm === 'function') bindContactForm();
+    });
+  </script>
+  
+</body>
+</html>
