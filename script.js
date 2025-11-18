@@ -44,34 +44,34 @@ async function fetchAndRenderProducts() {
     // NOTE: these IDs and image paths match the images you provided earlier
     products = [
       // 🥗 Starters
-      { id: 1, name: "Paneer Tikka", price: 180, category: "Starters", img: "image/Paneertikka.jpg" },
-      { id: 2, name: "Crispy Corn", price: 150, category: "Starters", img: "image/crispy corn.jpg" },
-      { id: 3, name: "Veg Manchurian", price: 160, category: "Starters", img: "image/Veg Manchurian.jpg" },
-      { id: 4, name: "Chicken Lollipop", price: 220, category: "Starters", img: "image/Chicken Lollipop.jpg" },
+      { id: 1, name: "Paneer Tikka", price: 180, category: "Starters", img: "Paneertikka.jpg" },
+      { id: 2, name: "Crispy Corn", price: 150, category: "Starters", img: "crispy corn.jpg" },
+      { id: 3, name: "Veg Manchurian", price: 160, category: "Starters", img: "Veg Manchurian.jpg" },
+      { id: 4, name: "Chicken Lollipop", price: 220, category: "Starters", img: "Chicken Lollipop.jpg" },
 
       // 🍛 Main Course
-      { id: 5, name: "Butter Chicken", price: 280, category: "Main Course", img: "image/Butter Chicken.jpg" },
-      { id: 6, name: "Paneer Butter Masala", price: 240, category: "Main Course", img: "image/Butter Paneer Masala.png" },
-      { id: 7, name: "Dal Tadka", price: 160, category: "Main Course", img: "image/Dal Tadka.jpg" },
-      { id: 8, name: "Veg Biryani", price: 200, category: "Main Course", img: "image/vegbiryani.png" },
-      { id: 9, name: "Chicken Biryani", price: 250, category: "Main Course", img: "image/Chicken Biryani.jpg" },
+      { id: 5, name: "Butter Chicken", price: 280, category: "Main Course", img: "Butter Chicken.jpg" },
+      { id: 6, name: "Paneer Butter Masala", price: 240, category: "Main Course", img: "Butter Paneer Masala.png" },
+      { id: 7, name: "Dal Tadka", price: 160, category: "Main Course", img: "Dal Tadka.jpg" },
+      { id: 8, name: "Veg Biryani", price: 200, category: "Main Course", img: "vegbiryani.png" },
+      { id: 9, name: "Chicken Biryani", price: 250, category: "Main Course", img: "Chicken Biryani.jpg" },
 
       // 🍞 Breads
-      { id: 10, name: "Butter Naan", price: 40, category: "Breads", img: "image/Butter Naan.jpg" },
-      { id: 11, name: "Garlic Naan", price: 50, category: "Breads", img: "image/Cheese Garlic Bread.png" },
-      { id: 12, name: "Tandoori Roti", price: 25, category: "Breads", img: "image/Tandoori Roti.jpg" },
+      { id: 10, name: "Butter Naan", price: 40, category: "Breads", img: "Butter Naan.jpg" },
+      { id: 11, name: "Garlic Naan", price: 50, category: "Breads", img: "Cheese Garlic Bread.png" },
+      { id: 12, name: "Tandoori Roti", price: 25, category: "Breads", img: "Tandoori Roti.jpg" },
 
       // 🍹 Drinks
-      { id: 13, name: "Sweet Lassi", price: 90, category: "Drinks", img: "image/Sweet Lassi.jpg" },
-      { id: 14, name: "Cold Coffee", price: 110, category: "Drinks", img: "image/cold-drink-7074305_1280.jpg" },
-      { id: 15, name: "Mango Shake", price: 120, category: "Drinks", img: "image/mangoshake.jpg" },
-      { id: 16, name: "Fresh Lime Soda", price: 80, category: "Drinks", img: "image/FreshLime Soda.jpg" },
+      { id: 13, name: "Sweet Lassi", price: 90, category: "Drinks", img: "Sweet Lassi.jpg" },
+      { id: 14, name: "Cold Coffee", price: 110, category: "Drinks", img: "cold-drink-7074305_1280.jpg" },
+      { id: 15, name: "Mango Shake", price: 120, category: "Drinks", img: "mangoshake.jpg" },
+      { id: 16, name: "Fresh Lime Soda", price: 80, category: "Drinks", img: "FreshLime Soda.jpg" },
 
       // 🍰 Desserts
-      { id: 17, name: "Gulab Jamun", price: 100, category: "Desserts", img: "image/Gulab Jamun.jpg" },
-      { id: 18, name: "Rasgulla", price: 100, category: "Desserts", img: "image/Rasgulla.jpg" },
-      { id: 19, name: "Brownie with Ice Cream", price: 160, category: "Desserts", img: "image/Chocolate Brownie.jpg" },
-      { id: 20, name: "Chocolate Mousse", price: 150, category: "Desserts", img: "image/Chocolate Mousse.jpg" }
+      { id: 17, name: "Gulab Jamun", price: 100, category: "Desserts", img: "Gulab Jamun.jpg" },
+      { id: 18, name: "Rasgulla", price: 100, category: "Desserts", img: "Rasgulla.jpg" },
+      { id: 19, name: "Brownie with Ice Cream", price: 160, category: "Desserts", img: "Chocolate Brownie.jpg" },
+      { id: 20, name: "Chocolate Mousse", price: 150, category: "Desserts", img: "Chocolate Mousse.jpg" }
     ];
   }
 
@@ -82,7 +82,7 @@ async function fetchAndRenderProducts() {
     const pid = p._id || p.id || p.name;
     return `
       <div class="product-card">
-        <img class="product-image" src="${p.img}" alt="${escapeHtml(p.name)}" onerror="this.src='image/placeholder.png'"/>
+        <img class="product-image" src="${p.img}" alt="${escapeHtml(p.name)}" onerror="this.src='placeholder.png'"/>
         <div>
           <div class="product-name">${escapeHtml(p.name)}</div>
           <div class="product-price">₹${p.price}</div>
@@ -274,7 +274,7 @@ function renderCartPage() {
 
   container.innerHTML = cart.map((it, idx) => `
     <div class="cart-row" data-idx="${idx}" >
-      <img src="${it.img}" alt="${escapeHtml(it.name)}" onerror="this.src='image/placeholder.png'"/>
+      <img src="${it.img}" alt="${escapeHtml(it.name)}" onerror="this.src='placeholder.png'"/>
       <div style="flex:1">
         <div style="font-weight:700">${escapeHtml(it.name)}</div>
         <div class="muted">₹${it.price}</div>
@@ -460,3 +460,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---------- UTIL ----------
 function escapeHtml(s) { return String(s).replace(/[&<>"]/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c])); }
+
