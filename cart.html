@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cart — Taste Heaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="logo">
+      <img src="image/download.jfif" alt="logo" class="logo-img" />
+      <span>Taste Heaven</span>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+        <span id="userGreeting" class="nav-link"></span>
+        <a href="login.html" class="nav-link" id="loginNav">Login</a>
+        <a href="#" class="nav-link" id="logoutNav" style="display:none;">Logout</a>
+
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h2 class="section-title">Your Cart</h2>
+    <div class="cart-wrap">
+      <div id="cartItems" class="cart-items">
+        <!-- cart rows injected by script.js -->
+      </div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <div>Subtotal</div>
+          <div id="cartSubtotal">₹0</div>
+        </div>
+        <div class="summary-row">
+          <div>Delivery</div>
+          <div id="cartDelivery">₹30</div>
+        </div>
+        <div class="summary-row total">
+          <div>Total</div>
+          <div id="cartTotal">₹0</div>
+        </div>
+        <div style="margin-top:12px;">
+          <button class="btn primary" id="checkoutBtn">Place Order</button>
+          <button class="btn ghost" id="clearCartBtn">Clear Cart</button>
+        </div>
+        <p id="orderMessage" class="form-message"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPage();
+      updateCartCount();
+    });
+  </script>
+</body>
+</html>

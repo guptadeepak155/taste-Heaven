@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Orders — Taste Heaven</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header small">
+    <div class="logo">
+      <img src="image/download.jfif" alt="logo" class="logo-img" />
+      <span>Taste Heaven</span>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cart.html" class="nav-link">Cart</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+        <span id="userGreeting" class="nav-link"></span>
+        <a href="login.html" class="nav-link" id="loginNav">Login</a>
+        <a href="#" class="nav-link" id="logoutNav" style="display:none;">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container section">
+    <h2 class="section-title">Order History</h2>
+    <div id="ordersWrap" class="orders-wrap">
+      <!-- orders injected by script.js -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderOrdersPage();
+    });
+    function showSuccessMessage() {
+      const popup = document.createElement('div');
+      popup.textContent = "✅ Order placed successfully!";
+      popup.style.position = "fixed";
+      popup.style.bottom = "20px";
+      popup.style.right = "20px";
+      popup.style.background = "#43a047";
+      popup.style.color = "#fff";
+      popup.style.padding = "12px 18px";
+      popup.style.borderRadius = "8px";
+      popup.style.boxShadow = "0 3px 8px rgba(0,0,0,0.15)";
+      popup.style.transition = "all 0.4s ease";
+      document.body.appendChild(popup);
+      setTimeout(() => popup.remove(), 2500);
+    }
+  </script>
+</body>
+</html>
