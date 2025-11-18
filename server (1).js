@@ -3,10 +3,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
-const contactRoutes = require('./routes/contactRoutes');
-const authRoutes = require('./routes/authRoutes');
-const productRoutes = require('./routes/productRoutes');
-const orderRoutes = require('./routes/orderRoutes');
+const contactRoutes = require('./contactRoutes');
+const authRoutes = require('./authRoutes');
+const productRoutes = require('./productRoutes');
+const orderRoutes = require('./orderRoutes');
 
 const app = express();
 app.use(cors());
