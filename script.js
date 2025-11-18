@@ -45,7 +45,7 @@ async function fetchAndRenderProducts() {
     products = [
       // 🥗 Starters
       { id: 1, name: "Paneer Tikka", price: 180, category: "Starters", img: "Paneertikka.jpg" },
-      { id: 2, name: "Crispy Corn", price: 150, category: "Starters", img: "Crispy Corn.jpg" },
+      { id: 2, name: "Crispy Corn", price: 150, category: "Starters", img: "taste-Heaven/Crispy Corn.jpg" },
       { id: 3, name: "Veg Manchurian", price: 160, category: "Starters", img: "Veg Manchurian.jpg" },
       { id: 4, name: "Chicken Lollipop", price: 220, category: "Starters", img: "Chicken Lollipop.jpg" },
 
@@ -460,6 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ---------- UTIL ----------
 function escapeHtml(s) { return String(s).replace(/[&<>"]/g, c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c])); }
+
 
 
 
